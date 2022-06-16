@@ -1,0 +1,73 @@
+body {
+	background: #e6e6e6;	
+}
+
+
+.page-header {
+	padding-bottom: 130px;
+	padding-top: 80px;
+	padding-left: 400px;
+	word-spacing: 100px;
+	font-size: 2.5rem;
+	background: url(../images/fon.jpg);
+
+}
+.container {
+	max-width: 100%;
+	font-family: cursive;
+	font-size: 2rem;
+	color:  #1a1a1a;
+	
+}
+
+.nav {
+	height: 100px;
+}
+
+.hello {
+	margin-left: 400px;
+	margin-right: 415px;
+
+}
+
+.about {
+	margin-left: 400px;
+	margin-right: 415px;
+	
+}
+
+.projects {
+	margin-left: 400px;
+	margin-right: 415px;
+	
+}
+
+.contact {
+	margin-left: 400px;
+	margin-right: 415px;
+	
+}
+
+h1 {
+	font-size: 5rem;
+}
+h2 {
+	font-size: 3rem;
+	margin-bottom: 10px;
+}
+
+/*списки!*/
+li {
+	list-style: none;
+}
+
+/*ссылочки*/
+a {
+	text-decoration: none;
+}
+a:visited {;
+	color: #1a1a1a;
+}
+a:hover {
+	color: #ff3385;
+}
