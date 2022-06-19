@@ -3,51 +3,144 @@
   <head>
     <meta charset="utf-8">
     <title>alina~</title>
-    <link rel="shortcut icon" href="имо16.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="imo16.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div class = "container">
+    <main>
 
-      <header class = "page-header">
-        <nav>          
+      <header class = " header">
+        <nav>   
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
-      <div class = "hello">
-        <h1>Hi, I'm Alina 🍥</h1>
-        <p>I am a novice frontend developer learning new things every day. Glad to see you here!</p>
-      </div>
+      <section class = "hello" id = "hello">
 
-      <div class="about" id = "about">
+        <div class="right-hello">
+          <div class = "hello-text">
+            <h1>Hi, I'm Alina 🍥</h1>
+            <p>I am a novice frontend developer learning new things every day.</p>
+            <p>Glad to see you here!</p>
+          </div>
+        </div>
+
+        <div class="left-hello">
+          <div class = "hello-picture">
+            <img src="images/MeMeMe.jpg">
+          </div>
+          <div class="contact1">
+            <div class="icon-contact">
+              <a href="https://t.me/littowl"><img src="images/tg.png"></a>
+            </div>
+            <div class="icon-contact">
+              <a href="https://www.instagram.com%2Finvites%2Fcontact%2F%3Fi%3D12l8i9595y0y6%26utm_content%3D3qzywc7&cc_key="><img src="images/inst.png"></a>
+            </div>
+            <div class="icon-contact">
+              <a href="https://github.com/Alina20002"><img src="images/git.png"></a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <h3 id = "about"></h2>
+      <section class="about">
         <h2>About</h2> 
-        <p>Welcome here! I am Alina, a web developer from Moscow.</p>
-        <p>I am a student studying at the Moscow Technical University of Communications and Informatics in the 2nd year at the Faculty of Information Technology.</p>
-        <h3>What can I do?</h3>
-        <p>In the course of my studies, I was engaged in web development, object-oriented programming, creating programs for operating systems, and also gained some experience in universal languages. Thus, I am proficient in the following languages:</p>
-        <ul>
-          <li>🐇 C++</li>
-          <li>🐇 Java</li>
-          <li>🐇 Python</li>
-          <li>🐇 HTML, CSS, JS</li>
-        </ul>
-      </div>
+        <div class="textAbout">
+          <p>Welcome here! I am Alina, a web developer from Moscow.</p>
+          <p>I am a student studying at the Moscow Technical University of Communications and Informatics in the 2nd year at the Faculty of Information Technology.</p>
+          <p>In addition to studying, I like to weave jewelry and play rhythm games~</p>
+          <h3>What can I do?</h3>
+          <p>During my studies, I was engaged in web development, object-oriented programming, creating programs for operating systems, and also gained some experience working with universal languages. So I practiced the following:</p>
+          <ul>
+            <li>🐇 C++</li>
+            <li>🐇 Java</li>
+            <li>🐇 Python</li>
+            <li>🐇 HTML, CSS, JS</li>
+          </ul>
+        </div>
+      </section>
 
+      <section class="projects" id = "projects">
+        <h2>Projects</h2>
+        <div class="textProjects">
+          <p>I posted several of my projects on 
+            <a href="https://github.com/Alina20002"> GitHub</a>
+              <svg class="icon icon-arrow-up-right2">
+                <use xlink:href="#icon-arrow-up-right2">
+                  <symbol id="icon-arrow-up-right2" viewBox="0 0 32 32">
+                    <path d="M7.414 27.414l16.586-16.586v7.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-12c0-0.809-0.487-1.538-1.235-1.848-0.248-0.103-0.508-0.151-0.765-0.151v-0.001h-12c-1.105 0-2 0.895-2 2s0.895 2 2 2h7.172l-16.586 16.586c-0.391 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path>
+                  </symbol>
+                </use>
+              </svg>
+            ! You can find there my first job in the field of frontend development, as well as this site.(and university laboratory works in Python, too...)
+          </p>
+          <h3>Other projects</h3>
+          <p>Some other projects are presented here:</p>
+        </div>
 
-      <div class="projects" id = "projects">
-        <h2>Projects <img src="../images/fon.jpg"> </h2>
-        <p>ссылка на гитхаб и краткое описание</p>
-      </div>
+        <div class="project-images" id="project-images">
+          <div class="chto">
+            <div class="bl0ck">
+              <div class="image-hover"></div>
+              <img src="images/1.png">
+              <p>
+                Graphic work in the MATLAB №1
+              </p>
+              <span>Pixel coloring by numbers</span>
+            </div>
+          </div>
+          <div class="chto">
+            <div class="bl0ck">
+              <div class="image-hover"></div>
+              <img src="images/3.png">
+              <p>
+                Graphic work in the MATLAB №2
+              </p>
+              <span>Replacing the blue panel with a random matrix</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div class="contact" id = "contact">
         <h2>Contact</h2>
-        <p>написать про контакты</p>
-        <a href="">Telegram</a>
-        <a href="">Email</a>
+        <p>I will be glad to contact you! Click here...</p>
+        <a href="#popup"><img src="images/pochta.png"></a>
+      </div>
+    </main>
+
+    <div id="popup" class="popup">
+      <a href="#contact" class = "popup_area"></a>
+      <div class="popup_body">
+        <div class="popup_content">
+          <a href="#contact" class = "popup_close">X</a>
+          <div class="popup_title">my contacts</div>
+          <div class="popup_text">
+            <p>Choose the most convenient way for you to contact me:</p>
+            <p>Name: Alina Gataullova</p>
+            <p>Email: alina.kotyaeva@mail.ru</p>
+            <a href="https://t.me/littowl">Telegram</a>
+              <svg class="icon icon-arrow-up-right2">
+                <use xlink:href="#icon-arrow-up-right2">
+                  <symbol id="icon-arrow-up-right2" viewBox="0 0 32 32">
+                    <path d="M7.414 27.414l16.586-16.586v7.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-12c0-0.809-0.487-1.538-1.235-1.848-0.248-0.103-0.508-0.151-0.765-0.151v-0.001h-12c-1.105 0-2 0.895-2 2s0.895 2 2 2h7.172l-16.586 16.586c-0.391 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path>
+                  </symbol>
+                </use>
+              </svg><br>
+            <a href="https://github.com/Alina20002">GitHub</a>
+              <svg class="icon icon-arrow-up-right2">
+                <use xlink:href="#icon-arrow-up-right2">
+                  <symbol id="icon-arrow-up-right2" viewBox="0 0 32 32">
+                    <path d="M7.414 27.414l16.586-16.586v7.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-12c0-0.809-0.487-1.538-1.235-1.848-0.248-0.103-0.508-0.151-0.765-0.151v-0.001h-12c-1.105 0-2 0.895-2 2s0.895 2 2 2h7.172l-16.586 16.586c-0.391 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path>
+                  </symbol>
+                </use>
+              </svg><br>
+            </div>
+        </div>
       </div>
     </div>
   </body>

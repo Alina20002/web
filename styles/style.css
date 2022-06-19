@@ -1,51 +1,127 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+/*общие параметры*/
 body {
 	background: #e6e6e6;	
-}
-
-
-.page-header {
-	padding-bottom: 100px;
-	padding-top: 80px;
-	padding-left: 22%;
-	word-spacing: 100px;
-	font-size: 2.5rem;
-	background: url(../images/fon.jpg);
-
-}
-.container {
 	max-width: 100%;
 	font-family: cursive;
 	font-size: 2rem;
 	color:  #1a1a1a;
-	
+	text-align: justify;
 }
 
-.nav {
-	height: 100px;
+/*это где зайцы сверху*/
+.header {
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	padding-bottom: 5px;
+	padding-top: 55px;
+	padding-left: 22%;
+	word-spacing: 100px;
+	background: url(../images/fon.jpg);
+	z-index:1;
+
 }
 
+/*раздел с приветствием и фото*/
 .hello {
-	margin-left: 20%;
-	margin-right: 15%;
-
+	padding: 15% 15% 14% 15%;
+	justify-content: center;
+	
+	display: flex;
+}
+.left-hello {
+	padding-left: 10px;
+	flex-direction: row;
+}
+.right-hello {
+	padding-right: 20px;
+}
+/*круглая рамка для фото*/
+.hello-picture img {
+	border-radius: 250px;
 }
 
+/*контакты около фото*/
+.contact1 {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin-left: 20%;
+	margin-right: 18%;
+	margin-top: 20px;
+	word-spacing: 20px;
+	text-align: center;
+}
+
+/*чтобы было приближение контакта иконы*/
+.icon-contact:hover{
+	transform: scale(1.1);
+	transition: all .5s ease;
+	border-style: solid;
+	border-radius: 30px;
+}
+
+/*разделЫ ABOUTTTTTT*/
 .about {
-	margin-left: 20%;
+	margin-left: 15%;
 	margin-right: 15%;
-	
+}
+.textAbout {
+	border-radius: 20px;
+	padding-left: 6px;
 }
 
+/*разделы проектов*/
 .projects {
-	margin-left: 20%;
-	margin-right: 15%;
-	
+	margin-left: 15%;
+	margin-right: 15%;	
+}
+.textProjects {
+	border-radius: 20px;
+	padding-left: 6px;
+}
+.textProjects a {
+	text-decoration: underline;
 }
 
+
+/*картинки проектов*/
+.project-images {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	justify-content: space-around;
+}
+.bl0ck {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #c6c2ff;
+  font-size: 32px;
+  text-align: center;
+}
+.bl0ck span {
+	font-size: 24px;
+}
+.chto {
+	flex-basis: 40%;
+	padding: 20px;
+}
+/*ЧТОБЫ блыо приближение при наведении на картинку*/
+.bl0ck:hover{
+	transform: scale(1.1);
+	transition: all .5s ease;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/*раздел контактов снизу*/
 .contact {
-	margin-left: 20%;
+	text-align: center;
+	margin-left: 15%;
 	margin-right: 15%;
-	
 }
 
 h1 {
@@ -54,11 +130,22 @@ h1 {
 h2 {
 	font-size: 3rem;
 	margin-bottom: 10px;
+	position: relative;
+}
+h2:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	right: 2px;
+	height: 2px;
+	background-color: #b25cff;
+	bottom: -10px;
 }
 
 /*списки!*/
 li {
 	list-style: none;
+	padding-left: 5%;
 }
 
 /*ссылочки*/
@@ -71,3 +158,82 @@ a:visited {;
 a:hover {
 	color: #ff3385;
 }
+
+/*СТРЕЛКА РЯДОМ С ССЫЛКОЙ!!!!!!!!!!!!!*/
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/*всплывающее окно*/
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+}
+.popup:target {
+	opacity: 1;
+	visibility: visible;
+}
+.popup:target .popup_content {
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+.popup_area {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.popup_body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
+}
+.popup_content {
+	text-align: center;
+	background-color: #fff;
+	color: #000;
+	max-width: 800px;
+	max-height: 500px;
+	padding: 30px;
+	position: relative;
+	transition: all 0.8s ease 0s;
+	opacity: 0;
+	transform: translate(0px,-100%);
+	border-style: solid;
+	border-color: pink;
+	border-radius: 35px;
+}
+.popup_close {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	font-size: 20px;
+}
+.popup_title {
+	font-size: 40px;
+	margin-bottom: 1em;
+}
+.popup_text {
+	font-size: 30px;
+}
+.popup_text a {
+	text-decoration: underline;
+}
+
