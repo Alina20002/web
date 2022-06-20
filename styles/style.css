@@ -61,8 +61,7 @@ body {
 .icon-contact:hover{
 	transform: scale(1.1);
 	transition: all .5s ease;
-	border-style: solid;
-	border-radius: 30px;
+
 }
 
 /*разделЫ ABOUTTTTTT*/
@@ -120,8 +119,20 @@ body {
 /*раздел контактов снизу*/
 .contact {
 	text-align: center;
-	margin-left: 15%;
-	margin-right: 15%;
+	margin: 15%;
+}
+/*кнопка с контактами*/
+.button-popup {
+	margin-left: 25%;
+	border-radius: 10px;
+	border-style: solid;
+  font-size: 24px;
+  width: 50%;
+}
+.button-popup:hover {
+	transform: scale(1.1);
+	transition: all .5s ease;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 h1 {
@@ -152,11 +163,15 @@ li {
 a {
 	text-decoration: none;
 }
+a:link {
+	color: #1a1a1a;
+}
 a:visited {;
 	color: #1a1a1a;
 }
 a:hover {
 	color: #ff3385;
+	transition: all .3s ease;
 }
 
 /*СТРЕЛКА РЯДОМ С ССЫЛКОЙ!!!!!!!!!!!!!*/
@@ -217,7 +232,7 @@ a:hover {
 	opacity: 0;
 	transform: translate(0px,-100%);
 	border-style: solid;
-	border-color: pink;
+	border-color: #c6c2ff;
 	border-radius: 35px;
 }
 .popup_close {
