@@ -5,7 +5,7 @@
 body {
 	background: #e6e6e6;	
 	max-width: 100%;
-	font-family: cursive;
+	font-family: 'Chilanka', cursive;
 	font-size: 2rem;
 	color:  #1a1a1a;
 	text-align: justify;
@@ -17,19 +17,33 @@ body {
 	left: 0;
 	position: fixed;
 	width: 100%;
-	padding-bottom: 5px;
+	padding-bottom: 0.5px;
 	padding-top: 55px;
 	padding-left: 22%;
 	word-spacing: 100px;
 	background: url(../images/fon.jpg);
 	z-index:1;
+	max-height: 100px;
+	font-size: 24px;
+}
+.header a {
+	text-decoration: underline;
 }
 
+
+
+/*ссылки в зайцах исчезают когда уменьшается экран*/
+@media screen and (max-width: 725px) {
+.hide {
+	display: none;
+}
+}
 /*раздел с приветствием и фото*/
 .hello {
-	padding: 15% 15% 14% 15%;
+	margin: 15% 0% 16% 0%;
 	justify-content: center;
 	display: flex;
+	flex-wrap: wrap;
 }
 /*раздел с текстом*/
 .left-hello {
@@ -64,13 +78,13 @@ body {
 
 
 
-
 /*раздел с фото*/
 .right-hello {
 	padding-right: 20px;
 }
 /*круглая рамка для фото*/
 .hello-picture img {
+
 	border-radius: 250px;
 }
 
@@ -130,6 +144,9 @@ body {
   background-color: #c6c2ff;
   font-size: 32px;
   text-align: center;
+ 	max-width: 100%;
+  height: auto;
+  width: auto\9;
 }
 .bl0ck span {
 	font-size: 24px;
@@ -152,17 +169,18 @@ body {
 }
 /*кнопка с контактами*/
 .button-popup {
-	margin-left: 25%;
 	border-radius: 10px;
 	border-style: solid;
   font-size: 24px;
-  width: 50%;
+ 	width: 200px;
+ 	margin: auto;
 }
 .button-popup:hover {
 	transform: scale(1.1);
 	transition: all .5s ease;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+
 
 h1 {
 	font-size: 5rem;
@@ -200,6 +218,7 @@ a:visited {;
 }
 a:hover {
 	color: #DB7093;
+	
 	transition: all .3s ease;
 }
 
