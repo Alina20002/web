@@ -19,11 +19,10 @@ body {
 	width: 100%;
 	padding-bottom: 0.5px;
 	padding-top: 55px;
-	padding-left: 22%;
-	word-spacing: 100px;
+	padding-left: 15%;
+	word-spacing: 30px;
 	background: url(../images/fon.jpg);
 	z-index:1;
-	max-height: 100px;
 	font-size: 24px;
 }
 .header a {
@@ -33,7 +32,7 @@ body {
 
 
 /*ссылки в зайцах исчезают когда уменьшается экран*/
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 500px) {
 .hide {
 	display: none;
 }
