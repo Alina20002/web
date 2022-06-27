@@ -4,122 +4,189 @@
 /*общие параметры*/
 body {
 	background: #e6e6e6;	
-	max-width: 100%;
+	width: 100%;
 	font-family: 'Chilanka', cursive;
 	font-size: 2rem;
 	color:  #1a1a1a;
-	text-align: justify;
+	margin: 0 auto;
+
+	transition: all .3s ease;
 }
 
 /*это где зайцы сверху*/
 .header {
-	top: 0;
-	left: 0;
 	position: fixed;
 	width: 100%;
-	padding-bottom: 0.5px;
-	padding-top: 55px;
-	padding-left: 15%;
-	word-spacing: 30px;
+	top: 0;
+	left: 0;
+	z-index: 50;	
+
+}
+.header:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
 	background: url(../images/fon.jpg);
-	z-index:1;
+	z-index: 2;
+}
+.header_body {
+	position: relative;
+	display: flex;
+	height: 80px;
+	align-items: center;
+	text-decoration: underline;
+	padding-left: 10%;
+}
+.header_list {
+	display: flex;
+	position: relative;
+	z-index: 2;
+	margin-top: 80px;
+}
+.header_list li {
+	list-style: none;
+	margin: 0px 0px 0px 60px;
 	font-size: 24px;
 }
-.header a {
-	text-decoration: underline;
-}
 
 
+/*меню когда уменьшается экран*/
+@media screen and (max-width: 767px) {
+	body.lock {
+		overflow: hidden;
+	}
+	.header:before {
+		background: url(../images/bunny.png);
+	}
+	.header_body {
+		height: 50px;
+	}
+	.header_burger {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+		padding-left: 10px;
+	}
+	.header_burger span {
+		position: absolute;
+		background-color: #fff;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 9px;
+	}
+	.header_burger:before,
+	.header_burger:after {
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+	}
+	.header_burger:before {
+		top: 0;
+	}
+	.header_burger:after {
+		bottom: 0;
+	}
 
-/*ссылки в зайцах исчезают когда уменьшается экран*/
-@media screen and (max-width: 500px) {
-.hide {
-	display: none;
+	.header_burger.active span {
+		transform: scale(0);
+	}
+	.header_burger.active:before {
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	.header_burger.active:after {
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+
+	.header_menu {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		transition: all 0.3s ease 0s;
+		padding: 70px 10px 20px 10px;
+		background: rgba(230, 230, 230, 0.9);
+
+	}
+	.header_menu.active {
+		top: 0;
+	}
+	.header_list {
+		display: block;
+	}
+	.header_list li {
+		margin: 0px 0px 20px 0px;
+	}
+	.header_link {
+		font-size: 28px;
+	}
 }
-}
+
 /*раздел с приветствием и фото*/
 .hello {
-	margin: 15% 0% 16% 0%;
+	margin: 0px auto;
+	max-width: 70%;
+	align-items: center;
 	justify-content: center;
 	display: flex;
 	flex-wrap: wrap;
-}
-/*раздел с текстом*/
-.left-hello {
-	padding-left: 10px;
-	padding-right: 40px;
-	flex-direction: row;
-}
+	min-height: 100vh;
 
-
-
-
-/*анимация*/
-.z1 {
-	transform: translate(0px, 50px);
-	opacity: 0;
-	transition: all 0.8s ease 0s;
 }
-.z2 {
-	transform: translate(0px, 50px);
-	opacity: 0;
-	transition: all 0.8s ease 0.4s;
+.hello-text {
+	width: 90%;
 }
-.z3 {
-	transform: translate(0px, 50px);
-	opacity: 0;
-	transition: all 0.8s ease 0.8s;
-}
-.active {
-	transform: translate(0px, 0px);
-	opacity: 1;
-}
-
-
-
-/*раздел с фото*/
-.right-hello {
-	padding-right: 20px;
-}
-/*круглая рамка для фото*/
+/*картинка сейлор меркурий*/
 .hello-picture img {
-
 	border-radius: 250px;
+	max-width: 100%;
 }
 
 /*контакты около фото*/
 .contact1 {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	position: relative;
-	margin-left: 20%;
-	margin-right: 18%;
-	margin-top: 20px;
-	word-spacing: 20px;
 	text-align: center;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+
 }
 
 /*чтобы было приближение контакта иконы*/
 .icon-contact:hover{
 	transform: scale(1.1);
 	transition: all .5s ease;
-
 }
 
 /*разделЫ ABOUTTTTTT*/
 .about {
-	margin-left: 15%;
-	margin-right: 15%;
+	margin: 0px auto;
+	max-width: 70%;
+	padding-top: 50px;
 }
-.textAbout {
-	border-radius: 20px;
-	padding-left: 6px;
-}
+
 
 /*разделы проектов*/
 .projects {
-	margin-left: 15%;
-	margin-right: 15%;	
+	margin: 0px auto;
+	max-width: 70%;
+	padding-top: 50px;
 }
 .textProjects {
 	border-radius: 20px;
@@ -138,21 +205,13 @@ body {
 	justify-content: space-around;
 }
 .bl0ck {
+	margin: 10px;
   border-radius: 10px;
   padding: 10px;
   background-color: #c6c2ff;
   font-size: 32px;
   text-align: center;
- 	max-width: 100%;
-  height: auto;
-  width: auto\9;
-}
-.bl0ck span {
-	font-size: 24px;
-}
-.chto {
-	flex-basis: 40%;
-	padding: 20px;
+	max-width: 100%;
 }
 /*ЧТОБЫ блыо приближение при наведении на картинку*/
 .bl0ck:hover{
@@ -160,19 +219,35 @@ body {
 	transition: all .5s ease;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+.bl0ck span {
+	font-size: 24px;
+}
+.bl0ck img {
+	max-width: 100%;
+}
+
+.chto {
+	max-width: 100%;
+}
+
 
 /*раздел контактов снизу*/
 .contact {
 	text-align: center;
-	
+	padding-top: 50px;
+	padding-bottom: 50px;
+	min-height: 50vh;
 }
 /*кнопка с контактами*/
+.button-block {
+	margin: 0px auto;
+	width: 20vh;
+}
 .button-popup {
 	border-radius: 10px;
 	border-style: solid;
   font-size: 24px;
- 	width: 200px;
- 	margin: auto;
+
 }
 .button-popup:hover {
 	transform: scale(1.1);
@@ -183,6 +258,7 @@ body {
 
 h1 {
 	font-size: 5rem;
+	margin-bottom: 0;
 }
 h2 {
 	font-size: 3rem;
@@ -200,7 +276,7 @@ h2:after {
 }
 
 /*списки!*/
-li {
+.about li {
 	list-style: none;
 	padding-left: 5%;
 }
@@ -299,3 +375,29 @@ a:hover {
 	text-decoration: underline;
 }
 
+
+/*анимация*/
+.z1 {
+	transform: translate(0px, 50px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+.z2 {
+	transform: translate(0px, 50px);
+	opacity: 0;
+	transition: all 0.8s ease 0.4s;
+}
+.z3 {
+	transform: translate(0px, 50px);
+	opacity: 0;
+	transition: all 0.8s ease 0.8s;
+}
+.active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+
+/*кнопка темой темы*/
+
+
+/*темная тема*/

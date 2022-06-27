@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name = "viewport" content = "_width=device-width">
+
     <title>alina~</title>
 
     <link rel="shortcut icon" href="images/imo16.ico" type="image/x-icon">
@@ -14,14 +16,26 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div class="wrapper">
-      <header class = " header">
-        <div class="hide">
-          <nav> 
-            <a href="#hello">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+
+      <header class = "header">
+        <div class="header_body">
+          <div class="header_burger">
+            <span></span>
+          </div>
+          <nav class="header_menu">
+            <ul class="header_list">
+              <li>
+                <a href="#hello" class="header_link">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="header_link">About</a>
+              </li>
+              <li>
+                <a href="#projects" class="header_link">Projects</a>
+              </li>
+              <li>
+                <a href="#contact" class="header_link">Contact</a>
+              </li>
           </nav>
         </div>
       </header>
@@ -30,7 +44,7 @@
 
         <div class="left-hello">
           <div class = "hello-text">
-            <h1 class="z1 anim">Hi, I'm Alina &#127833 </h1>
+            <h1 class="z1 anim">Hi, I'm Alina &#127833</h1>
             <p class="z2 anim">I am a novice frontend developer learning new things every day.</p>
             <p class="z3 anim">Glad to see you here!</p>
           </div>
@@ -51,11 +65,16 @@
               <a href="https://github.com/Alina20002"><img src="images/git.png"></a>
             </div>
           </div>
+          
         </div>
 
       </section>
 
+      
+
       <section class="about" id = "about">
+        <h3></h3>
+        <h3></h3>
         <h2>About</h2> 
         <div class="textAbout z1 anim">
           <p>Welcome here! I am Alina, a web developer from Moscow.</p>
@@ -118,9 +137,11 @@
         <h1>Contact</h1>
         <p>I will be glad to contact you!</p>
         <div class="chto z1 anim">
-          <div class="button-popup">
+          <div class="button-block">
             <a href="#popup">
-              <p>Get in touch</p> 
+              <div class="button-popup">
+                  <p>Get in touch</p> 
+              </div>
             </a>
           </div>
         </div>
@@ -156,7 +177,9 @@
           </div>
         </div>
       </div>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
       <script src="scripts/animationScroll.js"></script>
-    </div>
+      <script src="scripts/navScroll.js"></script>
+      <script src="scripts/menu.js"></script>
   </body>
 </html>
