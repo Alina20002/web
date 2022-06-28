@@ -219,7 +219,7 @@ body {
 	position: relative;
 	justify-content: space-around;
 }
-.block-image {
+.bl0ck {
 	margin: 10px;
   border-radius: 10px;
   padding: 10px;
@@ -232,7 +232,7 @@ body {
 .bl0ck:hover{
 	transform: scale(1.1);
 	transition: all .5s ease;
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	
 }
 .bl0ck span {
 	font-size: 24px;
@@ -241,7 +241,7 @@ body {
 	max-width: 100%;
 }
 
-.bl0ck {
+.chto {
 	max-width: 100%;
 }
 
